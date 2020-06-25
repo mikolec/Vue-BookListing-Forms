@@ -1,5 +1,5 @@
 <template>
-  <form v-on:submit.prevent="bookSubmit(bookTitle, bookAuthor)" class="" action="#" method="post">
+  <form v-on:submit.prevent="bookSubmit(bookData)" class="" action="#" method="post">
     <input v-model="bookData.bookTitle" type="text" name="title" value="" placeholder="Book Title">
     <input v-model="bookData.bookAuthor" type="text" name="author" value="" placeholder="Book Author">
     <div>
@@ -11,7 +11,7 @@
     <label for="borrowed">borrowed</label>
     <input type="radio" v-model="bookData.ownership" value="bought">
     <label for="bought">bought</label>
-    <button type="submit" name="button" v-on:submit.prevent="bookSubmit(bookData)">Add Book</button>
+    <button type="submit" name="button">Add Book</button>
   </form>
 </template>
 
